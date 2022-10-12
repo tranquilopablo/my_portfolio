@@ -6,6 +6,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
 .welcome {
   height: 100vh;
   display: -webkit-box;
@@ -14,6 +19,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .welcome .welcomeTextContainer {
@@ -64,12 +70,175 @@
 }
 
 .dark {
-  background: url("./img/bg1.png");
+  background: url("../img/bg1.png");
 }
 
 .purple {
-  background: rebeccapurple url("./img/bg2.png");
+  background: rebeccapurple url("../img/bg2.png");
 }
 
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
 
+.projects .projectsTitle {
+  font-size: 8vw;
+  color: #333;
+}
+
+.projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7vw;
+  height: 100vh;
+}
+
+.projects .project .phone {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.projects .project .phone .phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.projects .project .phone .phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.projects .project .projectDetail {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project .projectDetail .projectTitle {
+  font-size: 4vw;
+  color: #555;
+}
+
+.projects .project .projectDetail .projectDesc {
+  font-size: 18px;
+  color: #555;
+  text-align: justify;
+  line-height: 35px;
+}
+
+.projects .project .projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.projects .project .projectButton::after {
+  content: 'View Demo';
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -110%;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #555;
+  color: #222;
+}
+
+.projects .project .projectButton:hover.projectButton::after {
+  -webkit-transform: translateX(95%);
+          transform: translateX(95%);
+}
+
+.projects .project:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.laptop .laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptop .laptopScreen .laptopApp {
+  width: 100%;
+}
+
+.laptop .laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.githubContainer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */
