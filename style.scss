@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  // background-color: #111;
+  // overflow: hidden;
+}
+
+.welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  // overflow: hidden;
+  .welcomeTextContainer {
+    flex: 3;
+  }
+  .welcomeImgContainer {
+    flex: 1;
+  }
+  .welcomeText {
+    color: #333;
+    font-size: 50vw;
+    cursor: default;
+  }
+  .welcomeImg {
+    width: 90%;
+  }
+}
+
+.nameContainer {
+  height: 100vh;
+  padding: 1vw 2vw;
+  background-color: rebeccapurple;
+  .name {
+    font-size: 17vw;
+    color: #333;
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+  }
+}
+
+.jobTitleContainer {
+  height: 100vh;
+  .jobTitle {
+    font-size: 10vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+  }
+}
+.dark {
+  background: url("./img/bg1.png");
+}
+.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
