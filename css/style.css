@@ -124,6 +124,10 @@
   overflow: scroll;
 }
 
+.projects .project .phone .phoneScreen .phoneApp {
+  width: 100%;
+}
+
 .projects .project .phone .phoneScreen::-webkit-scrollbar {
   display: none;
 }
@@ -229,7 +233,7 @@
 }
 
 .githubContainer {
-  height: 100vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,5 +244,65 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.githubContainer .githubTitle {
+  margin-top: 2vw;
+  font-size: 5vw;
+  color: #333;
+}
+
+.githubContainer .githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.githubContainer .githubChart .dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.githubContainer .boxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.githubContainer .boxContainer .box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: 3s all ease;
+  transition: 3s all ease;
+}
+
+.githubContainer .boxContainer .active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubContainer .githubChart:hover .active:nth-child(2n+1) {
+  background-color: #195b2c;
+}
+
+.githubContainer .githubChart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+.githubContainer .githubSm {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
