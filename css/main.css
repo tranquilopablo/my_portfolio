@@ -12,6 +12,7 @@
 }
 
 .welcome {
+  position: relative;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,6 +27,40 @@
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+  z-index: 10;
+}
+
+.welcome .header-icon-one,
+.welcome .header-icon-two,
+.welcome .header-icon-three {
+  position: absolute;
+  opacity: 0.05;
+  z-index: 5;
+}
+
+.welcome .header-icon-one {
+  width: 9vw;
+  top: 70%;
+  left: 58%;
+  -webkit-animation: rotate-right 55s infinite linear;
+          animation: rotate-right 55s infinite linear;
+}
+
+.welcome .header-icon-two {
+  width: 3vw;
+  top: 20%;
+  left: 66%;
+  -webkit-animation: rotate-left 75s infinite linear;
+          animation: rotate-left 75s infinite linear;
+}
+
+.welcome .header-icon-three {
+  width: 5vw;
+  top: 65%;
+  left: 18%;
+  -webkit-animation: rotate-right 45s infinite linear;
+          animation: rotate-right 45s infinite linear;
+  z-index: 5;
 }
 
 .welcome .welcomeImgContainer {
@@ -35,6 +70,7 @@
 }
 
 .welcome .welcomeText {
+  display: block;
   color: #333;
   font-size: 50vw;
   cursor: default;
@@ -45,6 +81,7 @@
 }
 
 .nameContainer {
+  position: relative;
   height: 100vh;
   padding: 1vw 2vw;
   background-color: rebeccapurple;
@@ -56,6 +93,29 @@
   cursor: default;
   text-align: center;
   line-height: 100vh;
+}
+
+.nameContainer .name-icon-one,
+.nameContainer .name-icon-two {
+  position: absolute;
+  opacity: 0.05;
+  z-index: 5;
+}
+
+.nameContainer .name-icon-one {
+  width: 8vw;
+  top: 14%;
+  left: 8%;
+  -webkit-animation: rotate-right 65s infinite linear;
+          animation: rotate-right 65s infinite linear;
+}
+
+.nameContainer .name-icon-two {
+  width: 5vw;
+  top: 84%;
+  left: 88%;
+  -webkit-animation: rotate-left 45s infinite linear;
+          animation: rotate-left 45s infinite linear;
 }
 
 .jobTitleContainer {
@@ -112,6 +172,7 @@
   width: 300px;
   height: 600px;
   position: relative;
+  cursor: pointer;
 }
 
 .projects .project .phone .phoneScreen {
@@ -213,6 +274,7 @@
       -ms-flex: 1;
           flex: 1;
   position: relative;
+  cursor: pointer;
 }
 
 .laptop .laptopScreen {
@@ -294,7 +356,7 @@
   background-color: #195b2c;
 }
 
-.githubContainer .githubChart:hover .active:nth-child(2n+1) {
+.githubContainer .githubChart:hover .active:nth-child(2n + 1) {
   background-color: #195b2c;
 }
 
@@ -305,4 +367,98 @@
 .githubContainer .githubSm {
   display: none;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .phone,
+  .laptop {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .githubChart {
+    display: none;
+  }
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+  .githubSm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@-webkit-keyframes rotate-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

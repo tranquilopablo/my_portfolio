@@ -11,17 +11,49 @@
 }
 
 .welcome {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
+
   .welcomeTextContainer {
     flex: 3;
+    z-index: 10;
   }
+
+  .header-icon-one,
+  .header-icon-two,
+  .header-icon-three {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 5;
+  }
+  .header-icon-one {
+    width: 9vw;
+    top: 70%;
+    left: 58%;
+    animation: rotate-right 55s infinite linear;
+  }
+  .header-icon-two {
+    width: 3vw;
+    top: 20%;
+    left: 66%;
+    animation: rotate-left 75s infinite linear;
+  }
+  .header-icon-three {
+    width: 5vw;
+    top: 65%;
+    left: 18%;
+    animation: rotate-right 45s infinite linear;
+    z-index: 5;
+  }
+
   .welcomeImgContainer {
     flex: 1;
   }
   .welcomeText {
+    display: block;
     color: #333;
     font-size: 50vw;
     cursor: default;
@@ -32,6 +64,7 @@
 }
 
 .nameContainer {
+  position: relative;
   height: 100vh;
   padding: 1vw 2vw;
   background-color: rebeccapurple;
@@ -41,6 +74,25 @@
     cursor: default;
     text-align: center;
     line-height: 100vh;
+  }
+  .name-icon-one,
+  .name-icon-two {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 5;
+  }
+
+  .name-icon-one {
+    width: 8vw;
+    top: 14%;
+    left: 8%;
+    animation: rotate-right 65s infinite linear;
+  }
+  .name-icon-two {
+    width: 5vw;
+    top: 84%;
+    left: 88%;
+    animation: rotate-left 45s infinite linear;
   }
 }
 
@@ -80,6 +132,8 @@
       width: 300px;
       height: 600px;
       position: relative;
+      cursor: pointer;
+
       .phoneScreen {
         width: 264px;
         height: 567px;
@@ -151,6 +205,8 @@
   height: 379px;
   flex: 1;
   position: relative;
+  cursor: pointer;
+
   .laptopScreen {
     width: 451px;
     height: 283px;
@@ -158,6 +214,7 @@
     top: 18px;
     left: 68px;
     overflow: scroll;
+
     .laptopApp {
       width: 100%;
     }
@@ -213,5 +270,64 @@
   }
   .githubSm {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
   }
 }
