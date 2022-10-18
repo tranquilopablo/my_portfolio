@@ -7,6 +7,7 @@ const jobTitles = document.querySelectorAll('.jobTitle');
 const projectsTitle = document.querySelector('.projectsTitle');
 const phones = document.querySelectorAll('.phone');
 const laptop = document.querySelector('.laptop');
+const year = document.querySelector('.year');
 
 for (let i = 0; i < 369; i++) {
   const list = [
@@ -41,8 +42,14 @@ window.addEventListener('scroll', () => {
   jobTitles[0].style.transform = `translateX(calc(202vh - ${offsetY}px))`;
   jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
   jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
-  projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`;
-  phones[0].style.transform = `translateX(calc(500vh - ${offsetY}px))`;
-  laptop.style.transform = `translateX(calc(-600vh + ${offsetY}px))`;
-  phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`;
+
+  projectsTitle.style.transform = `translateY(calc(510vh - ${offsetY}px))`;
+  phones[0].style.transform = `translateX(calc(590vh - ${offsetY}px))`;
+  laptop.style.transform = `translateX(calc(-690vh + ${offsetY}px))`;
+  phones[1].style.transform = `translateX(calc(840vh - ${offsetY}px))`;
 });
+
+const getYear = () => {
+  year.textContent = new Date().getFullYear();
+};
+getYear();
