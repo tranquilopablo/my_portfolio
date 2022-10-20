@@ -50,6 +50,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   background-color: #111;
   overflow: hidden;
@@ -925,5 +929,18 @@
 
 .footer__copyright-year {
   font-weight: normal;
+}
+
+.footer__go-up a {
+  font-size: 1.6rem;
+  color: #a59c9c;
+  padding: .5rem;
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.footer__go-up a:hover {
+  color: #d3c7c7;
 }
 /*# sourceMappingURL=main.css.map */

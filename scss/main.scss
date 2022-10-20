@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .container {
   background-color: $dark;
@@ -595,5 +598,17 @@
   }
   &__copyright-year {
     font-weight: normal;
+  }
+  &__go-up a {
+    font-size: 1.6rem;
+    color: $chalk;
+    padding: .5rem;
+    cursor: pointer;
+    transition: color .3s;
+    // width: 30px;
+    // height: 30px;
+    &:hover{
+      color: $textLighter;
+    }
   }
 }
