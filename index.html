@@ -10,139 +10,161 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="container">
       <!-- INTRODUCTION -->
-      <div class="intro">
-        <div class="welcome">
-          <div class="welcomeTextContainer">
-            <h1 class="welcomeText">Hi</h1>
+      <header>
+        <section class="welcome">
+          <div class="welcome__text-container">
+            <h1 class="welcome__text">Hi</h1>
           </div>
-          <img class="header-icon-one" src="./img/icons/x.svg" alt="" />
-          <img class="header-icon-two" src="./img/icons/square.svg" alt="" />
-          <img class="header-icon-three" src="./img/icons/square.svg" alt="" />
-          <div class="welcomeImgContainer">
-            <img src="./img/person.png" alt="" class="welcomeImg" />
+          <img class="welcome__icon-one" src="./img/icons/x.svg" alt="" />
+          <img class="welcome__icon-two" src="./img/icons/square.svg" alt="" />
+          <img
+            class="welcome__icon-three"
+            src="./img/icons/square.svg"
+            alt=""
+          />
+          <div class="welcome__img-container">
+            <img src="./img/person.png" alt="" class="welcome__img" />
           </div>
-        </div>
-        <div class="nameContainer">
-          <h2 class="name">I'm Paweł</h2>
-          <img class="name-icon-one" src="./img/icons/square.svg" alt="" />
-          <img class="name-icon-two" src="./img/icons/square.svg" alt="" />
-        </div>
-        <div class="jobTitleContainer dark">
-          <h2 class="jobTitle">a self-taught</h2>
-        </div>
-        <div class="jobTitleContainer purple">
-          <h2 class="jobTitle">Web Developer</h2>
-        </div>
-      </div>
+        </section>
+        <section class="name">
+          <h2 class="name__me">I'm Paweł</h2>
 
+          <img class="name__icon-one" src="./img/icons/square.svg" alt="" />
+          <img class="name__icon-two" src="./img/icons/square.svg" alt="" />
+        </section>
+        <section class="job-title dark">
+          <h2 class="job-title__text">a self-taught</h2>
+        </section>
+        <section class="job-title purple">
+          <h2 class="job-title__text">Web Developer</h2>
+        </section>
+
+        <section class="name-mobile">
+          <h2 class="name-mobile__me">I'm Paweł,</h2>
+          <h2 class="name-mobile__me">a self-taught</h2>
+          <h2 class="name-mobile__me">Web Developer</h2>
+        </section>
+      </header>
       <!-- ABOUT AND SKILLS -->
-      <div class="about-wrapper">
-        <div class="about">
-          <div class="about-img"><img src="./img/ja.jpg" alt="" /></div>
+      <main class="about">
+        <section class="about__box">
+          <div class="about__img"><img src="./img/ja.jpg" alt="" /></div>
           <h3>Hello there!</h3>
-          <p class="about-text">
-            My name is <span>Paweł Zguda</span>. I started my journey with programming in
-            mid-2021. Systematic learning has allowed me to feel more confident
-            with each passing day, but I still have the desire to learn more
-            about the technologies mentioned and to learn more about others like
-            Typescript, Next and the backend environment. Although it is the
-            frontend side of web development that gives me the most pleasure.
-            Below you can see a selection of projects that allowed me to feel
-            more confident in the skills I obtained, and gather more new
+          <p class="about__text">
+            My name is <span>Paweł Zguda</span>. I started my journey with
+            programming in mid-2021. Systematic learning has allowed me to feel
+            more confident with each passing day, but I still have the desire to
+            learn more about the technologies mentioned and to learn more about
+            others like Typescript, Next and the backend environment. Although
+            it is the frontend side of web development that gives me the most
+            pleasure. Below you can see a selection of projects that allowed me
+            to feel more confident in the skills I obtained, and gather more new
             knowledge.
           </p>
-        </div>
-        <div class="skills">
+        </section>
+        <section class="skills">
           <p>Some technologies that I'm familiar to:</p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS/SASS</li>
-            <li>Javascript -ES6+</li>
-            <li>React</li>
-            <li>* Node</li>
-            <li>* Express</li>
-            <li>Git</li>
+          <ul class="skills__list">
+            <li><i class="fa fa-check" aria-hidden="true"></i>HTML</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>CSS</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>SCSS/SASS</li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>Javascript -ES6+
+            </li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>React</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>* Node</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>* Express</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Git</li>
           </ul>
-          <p>* - Basic knowledge or rarely used</p>
-        </div>
-      </div>
+          <p class="skills__notice">* - Basic knowledge or rarely used</p>
+        </section>
+      </main>
 
       <!-- PROJECTS -->
-      <div class="projects">
-        <h2 class="projectsTitle">Here are some of my projects</h2>
+      <section class="projects">
+        <h2 class="projects__title">Here are some of my projects</h2>
         <div class="project">
-          <div class="phone">
+          <div class="project__phone">
             <img src="./img/phone.png" alt="" />
-            <div class="phoneScreen">
-              <img src="./img/travelFocusApp.png" alt="" class="phoneApp" />
+            <div class="project__phone-screen">
+              <img
+                src="./img/travelFocusApp.png"
+                alt=""
+                class="project__phone-app"
+              />
             </div>
           </div>
-          <div class="projectDetail">
-            <h2 class="projectTitle">travelFocusApp</h2>
-            <p class="projectDesc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              repudiandae quia natus et iste earum ab fugiat eum ipsam, illum
-              vitae nihil quasi recusandae? Nesciunt laudantium recusandae illo
-              veritatis possimus! Accusamus repudiandae quia natus et iste earum
-              ab fugiat eum ipsam, illum vitae nihil quasi recusandae? Nesciunt
-              laudantium recusandae illo veritatis possimus! laudantium
-              recusandae illo veritatis possimus! recusandae illo veritatis.
+          <div class="project__detail">
+            <h2 class="project__title">travelFocusApp</h2>
+            <p class="project__desc">
+              An app written in React that allows you to add, delete and edit
+              places to visit and uncheck them to the accomplished list. Each
+              place is integrated with google maps, where you can quickly get an
+              overview of the location. The application uses the Node
+              environment using Express and MongoDB. Photos are uploaded to the
+              AWS S3 service.
             </p>
             <a
-              href="https://pawelzguda.com/"
-              class="projectButton"
+              href="https://github.com/tranquilopablo/travelFocusApp"
+              class="project__button"
               target="_blank"
               >Learn More</a
             >
-            <!-- <button class="projectButton">Learn More</button> -->
           </div>
         </div>
         <div class="project">
           <div class="laptop">
             <img src="./img/laptop.png" alt="" />
-            <div class="laptopScreen">
+            <div class="laptop__screen">
               <img
                 src="./img/Adventure-Blog-App.png"
                 alt=""
-                class="laptopApp"
+                class="laptop__app"
               />
             </div>
           </div>
-          <div class="projectDetail">
-            <h2 class="projectTitle">travelFocusApp</h2>
-            <p class="projectDesc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              repudiandae quia natus et iste earum ab fugiat eum ipsam, illum
-              vitae nihil quasi recusandae? Nesciunt laudantium recusandae illo
-              veritatis possimus! Accusamus repudiandae quia natus et iste earum
-              ab fugiat eum ipsam, illum vitae nihil quasi recusandae? Nesciunt
-              laudantium recusandae illo veritatis possimus! laudantium
-              recusandae illo veritatis possimus! recusandae illo veritatis.
+          <div class="project__detail">
+            <h2 class="project__title">adventure-blog-app</h2>
+            <p class="project__desc">
+              A blog application written in React. The user, after logging in,
+              has the ability to edit and delete the post and the profile
+              itself. The main task of writing the application was to integrate
+              its frontend with the server, along with the database and AWS
+              service where the photos are stored.
             </p>
             <a
-              href="https://pawelzguda.com/"
-              class="projectButton"
+              href="https://github.com/tranquilopablo/adventure_blog_app"
+              class="project__button"
               target="_blank"
               >Learn More</a
             >
-            <!-- <button class="projectButton">Learn More</button> -->
           </div>
         </div>
         <div class="project">
-          <div class="phone">
+          <div class="project__phone">
             <img src="./img/phone.png" alt="" />
-            <div class="phoneScreen">
-              <img src="./img/travelFocusApp.png" alt="" class="phoneApp" />
+            <div class="project__phone-screen">
+              <img
+                src="./img/travelFocusApp.png"
+                alt=""
+                class="project__phone-app"
+              />
             </div>
           </div>
-          <div class="projectDetail">
-            <h2 class="projectTitle">travelFocusApp</h2>
-            <p class="projectDesc">
+          <div class="project__detail">
+            <h2 class="project__title">travelFocusApp</h2>
+            <p class="project__desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
               repudiandae quia natus et iste earum ab fugiat eum ipsam, illum
               vitae nihil quasi recusandae? Nesciunt laudantium recusandae illo
@@ -152,20 +174,19 @@
               recusandae illo veritatis possimus! recusandae illo veritatis.
             </p>
             <a
-              href="https://pawelzguda.com/"
-              class="projectButton"
+              href="https://github.com/tranquilopablo/adventure_blog_app"
+              class="project__button"
               target="_blank"
               >Learn More</a
             >
-            <!-- <button class="projectButton">Learn More</button> -->
           </div>
         </div>
-      </div>
+      </section>
       <!-- GITHUB -->
-      <div class="githubContainer">
-        <h1 class="githubTitle">Want to see my projects?</h1>
-        <div class="githubChart">
-          <div class="dates">
+      <section class="github">
+        <h1 class="github__title">Want to see my projects?</h1>
+        <div class="github__chart">
+          <div class="github__dates">
             <span>Jan</span>
             <span>Feb</span>
             <span>Mar</span>
@@ -181,22 +202,24 @@
           </div>
           <a
             href="https://github.com/tranquilopablo"
-            class="boxContainer"
+            class="github__box-container"
             target="_blank"
           ></a>
-          <h1 class="githubTitle">ON GITHUB</h1>
+          <h1 class="github__title">ON GITHUB</h1>
         </div>
         <div class="githubSm">
-          <a href="">
-            <img src="./img/github.png" alt="" />
+          <a href="https://github.com/tranquilopablo" target="_blank">
+            <img src="./img/GitHub-Mark-Light-120px-plus.png" alt="" />
           </a>
           <h2>Find Me on Github</h2>
         </div>
-      </div>
+      </section>
     </div>
-    <footer class="footer-wrapper">
-      <div class="footer-box">
-        <h3 class="contact-box"><span>Contact</span></h3>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__box">
+        <h3 class="footer__contact-box"><span>Contact</span></h3>
         <p>Email: <span>zgudapawel@gmail.com</span></p>
         <p>
           <a href="https://github.com/tranquilopablo" target="_blank">GitHub</a>
@@ -208,8 +231,8 @@
             >LinkedIn</a
           >
         </p>
-        <div class="copyright">
-          <p>© <span class="year"></span> Paweł Zguda</p>
+        <div class="footer__copyright">
+          <p>© <span class="footer__copyright-year"></span> Paweł Zguda</p>
         </div>
       </div>
     </footer>

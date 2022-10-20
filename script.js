@@ -1,13 +1,19 @@
-const boxContainer = document.querySelector('.boxContainer');
-const welcomeTextContainer = document.querySelector('.welcomeTextContainer');
-const welcomeImgContainer = document.querySelector('.welcomeImgContainer');
-const authorName = document.querySelector('.name');
-const jobTitleContainers = document.querySelectorAll('.jobTitleContainer');
-const jobTitles = document.querySelectorAll('.jobTitle');
-const projectsTitle = document.querySelector('.projectsTitle');
-const phones = document.querySelectorAll('.phone');
+const boxContainer = document.querySelector('.github__box-container');
+const welcomeTextContainer = document.querySelector('.welcome__text-container');
+const welcomeImgContainer = document.querySelector('.welcome__img-container');
+const authorName = document.querySelector('.name__me');
+const jobTitleContainers = document.querySelectorAll('.job-title');
+const jobTitles = document.querySelectorAll('.job-title__text');
+const projectsTitle = document.querySelector('.projects__title');
+const phones = document.querySelectorAll('.project__phone');
 const laptop = document.querySelector('.laptop');
 const year = document.querySelector('.year');
+const nameMobileContainer = document.querySelector(
+  '.name-mobile'
+);
+const aboutSkills = document.querySelector('.about');
+
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
 for (let i = 0; i < 369; i++) {
   const list = [
@@ -32,21 +38,43 @@ for (let i = 0; i < 369; i++) {
 }
 
 window.addEventListener('scroll', () => {
-  let offsetY = window.scrollY;
-  welcomeTextContainer.style.transform = `translateY(${offsetY * 0.2}px)`;
+  const offsetY = window.scrollY;
+  const scrollTop = aboutSkills.offsetTop;
+  const isSectionReached = offsetY > scrollTop;
+
   welcomeImgContainer.style.transform = `translate(${offsetY * 0.4}px , ${
     offsetY * 0.8
   }px)`;
-  authorName.style.transform = `translateX(${offsetY * 0.1}px)`;
-  jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.6}px`;
-  jobTitles[0].style.transform = `translateX(calc(202vh - ${offsetY}px))`;
-  jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
-  jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
 
-  projectsTitle.style.transform = `translateY(calc(510vh - ${offsetY}px))`;
-  phones[0].style.transform = `translateX(calc(590vh - ${offsetY}px))`;
-  laptop.style.transform = `translateX(calc(-690vh + ${offsetY}px))`;
-  phones[1].style.transform = `translateX(calc(840vh - ${offsetY}px))`;
+  if (!isMobile) {
+    welcomeTextContainer.style.transform = `translateY(${offsetY * 0.2}px)`;
+
+    authorName.style.transform = `translateX(${offsetY * 0.1}px)`;
+    jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.6}px`;
+    jobTitles[0].style.transform = `translateX(calc(202vh - ${offsetY}px))`;
+    jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
+    jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
+
+    projectsTitle.style.transform = `translateY(calc(510vh - ${offsetY}px))`;
+    phones[0].style.transform = `translateX(calc(580vh - ${offsetY}px))`;
+    laptop.style.transform = `translateX(calc(-690vh + ${offsetY}px))`;
+    phones[1].style.transform = `translateX(calc(830vh - ${offsetY}px))`;
+  } else {
+    if (!isSectionReached) {
+      welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
+      nameMobileContainer.style.backgroundPositionY = `${offsetY * 0.6}px`;
+    } else{
+      welcomeImgContainer.style.transform = `none`;
+
+    }
+  }
+
+  // if (nameMobileContainer) {
+  //   welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
+
+  // }
+
+  // nameMobileContainer.style.backgroundPositionY = `${offsetY * 0.6}px`;
 });
 
 const getYear = () => {
