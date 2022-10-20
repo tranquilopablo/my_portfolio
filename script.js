@@ -7,7 +7,7 @@ const jobTitles = document.querySelectorAll('.job-title__text');
 const projectsTitle = document.querySelector('.projects__title');
 const phones = document.querySelectorAll('.project__phone');
 const laptop = document.querySelector('.laptop');
-const year = document.querySelector('.year');
+const year = document.querySelector('.footer__copyright-year');
 const nameMobileContainer = document.querySelector(
   '.name-mobile'
 );
@@ -56,9 +56,9 @@ window.addEventListener('scroll', () => {
     jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
 
     projectsTitle.style.transform = `translateY(calc(510vh - ${offsetY}px))`;
-    phones[0].style.transform = `translateX(calc(580vh - ${offsetY}px))`;
-    laptop.style.transform = `translateX(calc(-690vh + ${offsetY}px))`;
-    phones[1].style.transform = `translateX(calc(830vh - ${offsetY}px))`;
+    phones[0].style.transform = `translateX(calc(590vh - ${offsetY}px))`;
+    laptop.style.transform = `translateX(calc(-700vh + ${offsetY}px))`;
+    phones[1].style.transform = `translateX(calc(850vh - ${offsetY}px))`;
   } else {
     if (!isSectionReached) {
       welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
