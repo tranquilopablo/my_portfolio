@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -35,7 +35,6 @@ html{
   &__text {
     display: block;
     color: $textColor;
-    font-size: 50vw;
     cursor: default;
     font-size: 70vw;
     @media (min-width: 360px) {
@@ -55,8 +54,8 @@ html{
     left: 6%;
     animation: rotate-right 55s infinite linear;
     @media (min-width: 768px) {
-      width: 9vw;
-      top: 70%;
+      width: 12vw;
+      top: 76%;
       left: 58%;
     }
   }
@@ -66,12 +65,12 @@ html{
     left: 75%;
     animation: rotate-left 75s infinite linear;
     @media (min-width: 768px) {
-      width: 3vw;
+      width: 5vw;
       top: 20%;
-      left: 66%;
+      left: 56%;
     }
     @media (min-width: 1024px) {
-      left: 52%;
+      left: 66%;
     }
   }
   &__icon-three {
@@ -81,8 +80,8 @@ html{
     animation: rotate-right 45s infinite linear;
     z-index: 5;
     @media (min-width: 768px) {
-      width: 5vw;
-      top: 65%;
+      width: 6vw;
+      top: 80%;
       left: 18%;
     }
   }
@@ -195,8 +194,11 @@ html{
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    padding: 3rem 10px 10px 10px;
+    height: 110vh;
+  }
+  @media (min-width: 1400px) {
     padding: 6rem 10px 10px 10px;
-    height: 100vh;
   }
   &__box {
     display: flex;
@@ -207,12 +209,22 @@ html{
     h3 {
       padding-top: 4rem;
       font-size: 1.5rem;
+      @media (min-width: 1024px) {
+        padding-top: 2rem;
+      }
+      @media (min-width: 1400px) {
+        padding-top: 4rem;
+      }
     }
   }
   &__img {
     position: relative;
     width: 64vw;
     height: 64vw;
+    @media (min-width: 576px) {
+      width: 32vw;
+      height: 32vw;
+    }
     @media (min-width: 1024px) {
       width: 14vw;
       height: 14vw;
@@ -240,11 +252,15 @@ html{
     padding: 3rem 0 3rem 0;
     text-align: justify;
     @media (min-width: 1024px) {
-      width: 70%;
-      font-size: 1.2rem;
+      width: 85%;
+      font-size: 1rem;
       line-height: 160%;
       padding: 3rem 0 7rem 0;
       text-align: left;
+    }
+    @media (min-width: 1400px) {
+      width: 70%;
+      font-size: 1.2rem;
     }
     span {
       font-size: 1.25rem;
@@ -272,6 +288,9 @@ html{
       list-style: none;
       font-size: 1rem;
       @media (min-width: 1024px) {
+        font-size: 1rem;
+      }
+      @media (min-width: 1400px) {
         font-size: 1.2rem;
       }
 
@@ -286,11 +305,21 @@ html{
     p {
       padding: 3rem 0 3rem 0;
       font-size: 1.1rem;
+      &:first-child {
+        @media (min-width: 1024px) {
+          padding: 3rem 0;
+        }
+        @media (min-width: 1400px) {
+          padding: 3rem 0 6rem 0;
+        }
+      }
       @media (min-width: 1024px) {
         padding: 3rem 0 7rem 0;
       }
+      
     }
-    &__notice {
+
+    p:nth-last-child(1) {
       font-size: 0.85rem;
     }
   }
@@ -308,10 +337,16 @@ html{
     gap: 30vh;
     padding: 0px 100px;
   }
+  @media (min-width: 1400px) {
+    // gap: 20vh;
+  }
   &__title {
     text-align: center;
     font-size: 8vw;
     margin-top: 8rem;
+    @media (min-width: 768px) {
+      font-size: 7vw;
+    }
     @media (min-width: 1024px) {
       margin-top: 0;
     }
@@ -322,13 +357,14 @@ html{
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    // gap: 1vw;
+    gap: 1vw;
     height: fit-content;
-    // margin-bottom: 8vw;
+    @media (min-width: 768px) {
+      margin-bottom: 8vw;
+    }
     @media (min-width: 1024px) {
       flex-direction: row;
       height: 100vh;
-      // gap: 7vw;
     }
     &:nth-child(2n) {
       flex-direction: column;
@@ -336,7 +372,6 @@ html{
         flex-direction: row-reverse;
       }
     }
-
     &__phone {
       flex: 1;
       width: 300px;
@@ -345,8 +380,10 @@ html{
       cursor: pointer;
       z-index: 10;
       transform: scale(0.8);
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         transform: scale(1);
+        margin-bottom: 3rem;
+
       }
     }
     &__phone-screen {
@@ -372,11 +409,13 @@ html{
       align-items: center;
       color: $chalk;
     }
-
     &__title {
-      font-size: 8vw;
-      @media (min-width: 1024px) {
+      font-size: 7vw;
+      @media (min-width: 576px) {
         font-size: 4vw;
+      }
+      @media (min-width: 1024px) {
+        font-size: 3vw;
       }
     }
     &__desc {
@@ -426,8 +465,10 @@ html{
   position: relative;
   cursor: pointer;
   transform: scale(0.55);
-  @media (min-width: 1024px) {
+  z-index: 10;
+  @media (min-width: 768px) {
     transform: scale(1);
+    margin-bottom: 3rem;
   }
   &__screen {
     width: 451px;
@@ -452,18 +493,25 @@ html{
   justify-content: space-around;
   margin-top: 3rem;
   height: 60vh;
-  @media (min-width: 1024px) {
-    height: 80vh;
+  @media (min-width: 768px) {
+    height: 70vh;
     margin-top: 0;
+  }
+  @media (min-width: 1024px) {
+    height: 100vh;
   }
   &__title {
     text-align: center;
     margin-top: 2rem;
     font-size: 8vw;
     color: $textColor;
+    @media (min-width: 768px) {
+      font-size: 6vw;
+      margin-top: 5vw;
+    }
     @media (min-width: 1024px) {
-      margin-top: 2vw;
       font-size: 5vw;
+      // margin-top: 12vw;
     }
   }
   &__chart {
@@ -602,12 +650,12 @@ html{
   &__go-up a {
     font-size: 1.6rem;
     color: $chalk;
-    padding: .5rem;
+    padding: 0.5rem;
     cursor: pointer;
-    transition: color .3s;
+    transition: color 0.3s;
     // width: 30px;
     // height: 30px;
-    &:hover{
+    &:hover {
       color: $textLighter;
     }
   }

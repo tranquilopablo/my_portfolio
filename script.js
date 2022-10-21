@@ -13,7 +13,7 @@ const nameMobileContainer = document.querySelector(
 );
 const aboutSkills = document.querySelector('.about');
 
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
+const isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
 for (let i = 0; i < 369; i++) {
   const list = [
@@ -56,9 +56,9 @@ window.addEventListener('scroll', () => {
     jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
 
     projectsTitle.style.transform = `translateY(calc(510vh - ${offsetY}px))`;
-    phones[0].style.transform = `translateX(calc(590vh - ${offsetY}px))`;
-    laptop.style.transform = `translateX(calc(-700vh + ${offsetY}px))`;
-    phones[1].style.transform = `translateX(calc(850vh - ${offsetY}px))`;
+    phones[0].style.transform = `translateX(calc(600vh - ${offsetY}px))`;
+    laptop.style.transform = `translateX(calc(-730vh + ${offsetY}px))`;
+    phones[1].style.transform = `translateX(calc(890vh - ${offsetY}px))`;
   } else {
     if (!isSectionReached) {
       welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
