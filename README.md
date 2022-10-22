@@ -1,5 +1,4 @@
-# My Portfolio
+# My own Portfolio
 
-My own portfolio
 
 [Portfolio](http://pablodev.site/)
