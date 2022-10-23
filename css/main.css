@@ -1014,7 +1014,7 @@ html {
   font-weight: normal;
 }
 
-.footer__go-up a {
+.footer__go-up div {
   font-size: 1.6rem;
   color: #a59c9c;
   padding: 0.5rem;
@@ -1023,7 +1023,7 @@ html {
   transition: color 0.3s;
 }
 
-.footer__go-up a:hover {
+.footer__go-up div:hover {
   color: #d3c7c7;
 }
 /*# sourceMappingURL=main.css.map */

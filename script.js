@@ -8,10 +8,9 @@ const projectsTitle = document.querySelector('.projects__title');
 const phones = document.querySelectorAll('.project__phone');
 const laptop = document.querySelector('.laptop');
 const year = document.querySelector('.footer__copyright-year');
-const nameMobileContainer = document.querySelector(
-  '.name-mobile'
-);
+const nameMobileContainer = document.querySelector('.name-mobile');
 const aboutSkills = document.querySelector('.about');
+const scrollToTop = document.querySelector('.scroll-top');
 
 const isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
@@ -63,21 +62,22 @@ window.addEventListener('scroll', () => {
     if (!isSectionReached) {
       welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
       nameMobileContainer.style.backgroundPositionY = `${offsetY * 0.6}px`;
-    } else{
+    } else {
       welcomeImgContainer.style.transform = `none`;
-
     }
   }
-
-  // if (nameMobileContainer) {
-  //   welcomeTextContainer.style.transform = `translateY(${offsetY * 0.8}px)`;
-
-  // }
-
-  // nameMobileContainer.style.backgroundPositionY = `${offsetY * 0.6}px`;
 });
 
 const getYear = () => {
   year.textContent = new Date().getFullYear();
 };
 getYear();
+
+const goToTop = () => {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+};
+scrollToTop.addEventListener('click', goToTop);

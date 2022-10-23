@@ -316,7 +316,6 @@ html {
       @media (min-width: 1024px) {
         padding: 3rem 0 7rem 0;
       }
-      
     }
 
     p:nth-last-child(1) {
@@ -383,7 +382,6 @@ html {
       @media (min-width: 768px) {
         transform: scale(1);
         margin-bottom: 3rem;
-
       }
     }
     &__phone-screen {
@@ -647,14 +645,12 @@ html {
   &__copyright-year {
     font-weight: normal;
   }
-  &__go-up a {
+  &__go-up div {
     font-size: 1.6rem;
     color: $chalk;
     padding: 0.5rem;
     cursor: pointer;
     transition: color 0.3s;
-    // width: 30px;
-    // height: 30px;
     &:hover {
       color: $textLighter;
     }
