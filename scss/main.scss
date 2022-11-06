@@ -28,6 +28,9 @@ html {
   @media (min-width: 768px) {
     flex-direction: row;
   }
+  @media screen and (orientation: landscape) and (min-device-width: 560px) {
+    flex-direction: row;
+  }
   &__text-container {
     flex: 3;
     z-index: 10;
@@ -87,6 +90,7 @@ html {
   }
   &__img-container {
     flex: 2;
+    z-index: 10;
     @media (min-width: 1024px) {
       flex: 1;
     }
@@ -95,6 +99,10 @@ html {
     width: 80%;
     @media (min-width: 768px) {
       width: 90%;
+    }
+    @media screen and (orientation: landscape) and (min-device-width: 560px) {
+      width: 50%;
+      margin-bottom: -40px;
     }
     @media (min-width: 1024px) {
       width: 94%;
@@ -175,6 +183,9 @@ html {
   h2 {
     margin: 1rem 0;
     font-size: 10vw;
+    @media screen and (orientation: landscape) and (min-device-width: 560px) {
+      font-size: 8vw;
+    }
   }
   @media (min-width: 1024px) {
     display: none;
@@ -498,6 +509,9 @@ html {
   @media (min-width: 1024px) {
     height: 100vh;
   }
+  @media screen and (orientation: landscape) and (min-device-width: 560px) {
+    height: 120vh;
+  }
   &__title {
     text-align: center;
     margin-top: 2rem;
@@ -641,6 +655,9 @@ html {
 
   &__copyright {
     margin-top: 2rem;
+    @media screen and (orientation: landscape) and (min-device-width: 560px) {
+      margin-top: 0rem;
+    }
   }
   &__copyright-year {
     font-weight: normal;
