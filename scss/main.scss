@@ -365,7 +365,6 @@ html {
   .project {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     gap: 1vw;
     height: fit-content;
@@ -523,7 +522,6 @@ html {
     }
     @media (min-width: 1024px) {
       font-size: 5vw;
-      // margin-top: 12vw;
     }
   }
   &__chart {
@@ -643,7 +641,6 @@ html {
       color: $textLighter;
       padding: 0.5rem 1rem;
       transition: 0.3s;
-      // font-size: 1rem;
       @media (min-width: 1024px) {
         font-size: 2rem;
       }
