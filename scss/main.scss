@@ -43,6 +43,9 @@ html {
     @media (min-width: 360px) {
       font-size: 50vw;
     }
+    @media (min-width: 2360px) {
+      font-size: 40vw;
+    }
   }
   &__icon-one,
   &__icon-two,
@@ -106,6 +109,9 @@ html {
     }
     @media (min-width: 1024px) {
       width: 94%;
+    }
+    @media (min-width: 2600px) {
+      width: 65%;
     }
   }
 }

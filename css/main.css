@@ -113,6 +113,12 @@ html {
   }
 }
 
+@media (min-width: 2360px) {
+  .welcome__text {
+    font-size: 40vw;
+  }
+}
+
 .welcome__icon-one, .welcome__icon-two, .welcome__icon-three {
   position: absolute;
   opacity: 0.05;
@@ -209,6 +215,12 @@ html {
 @media (min-width: 1024px) {
   .welcome__img {
     width: 94%;
+  }
+}
+
+@media (min-width: 2600px) {
+  .welcome__img {
+    width: 65%;
   }
 }
 
